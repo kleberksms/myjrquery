@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My JRquery</title>
+</head>
+<body>
+	<h1>My JRquery</h1>
+
+	<p>Primeiro parágrafo, com <a href="http://www.google.com">links</a> e outras  informações.</p>
+
+	<p>Segundo parágrafo, com <a href="http://www.apple.com">links</a> e outras  <strong>informações</strong>.</p>
+
+<script type="text/javascript" src="myjrquery.js"></script>
+<script type="text/javascript">
+	//using the module above created
+	var $ = new modulo;
+
+	$("a, .paragrafo").addClass("destaque");
+
+	$("a, p").on("click", function(event){
+	  alert("teste");
+	  return false;
+	}, "body");
+</script>
+</body>
+</html>
