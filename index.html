@@ -2,25 +2,28 @@
 <html>
 <head>
 	<title>My JRquery</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<h1>My JRquery</h1>
 
-	<p>Primeiro parágrafo, com <a href="http://www.google.com">links</a> e outras  informações.</p>
+	<p class="paragrafo">Primeiro parágrafo, com <a href="http://www.google.com">links</a> e outras  informações.</p>
 
 	<p>Segundo parágrafo, com <a href="http://www.apple.com">links</a> e outras  <strong>informações</strong>.</p>
 
-<script type="text/javascript" src="myjrquery.js"></script>
-<script type="text/javascript">
-	//using the module above created
-	var $ = new modulo;
+	<script type="text/javascript" src="myjrquery.js"></script>
+	<script type="text/javascript">
+		//using the module above created
+		var $ = new modulo;
 
-	$("a, .paragrafo").addClass("destaque");
+		$("a, .paragrafo").addClass("destaque");
 
-	$("a, p").on("click", function(event){
-	  alert("teste");
-	  return false;
-	}, "body");
-</script>
+		$("a, p").on("click", function(event){
+			event.preventDefault();
+			event.stopPropagation();
+			alert("teste");
+			return false;
+		}, "body");
+	</script>
 </body>
 </html>
