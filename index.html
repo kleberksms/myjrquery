@@ -14,11 +14,10 @@
 	<script type="text/javascript" src="myjrquery.js"></script>
 	<script type="text/javascript">
 		//using the module above created
-		var $ = new modulo;
 
 		$("a, .paragrafo").addClass("destaque");
 
-		$("a, p").on("click", function(event){
+		$("p").on("click", function(event){
 			event.preventDefault();
 			event.stopPropagation();
 			alert("teste");

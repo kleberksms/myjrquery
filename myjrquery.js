@@ -57,6 +57,7 @@ var modulo = function(){
 			return that;
 		}
 
+		// function to bind events on objects of dom
 		that.on = function(event,call,parent){
 			i = 0;
 			var leng = nameKeys.length,
@@ -71,7 +72,6 @@ var modulo = function(){
 						position = nameKeys.indexOf(e.target.tagName);
 						if(position >= 0){
 							call(e);
-							//nameKeys.splice(position,1)
 						}
 
 					});
@@ -99,3 +99,5 @@ var modulo = function(){
 		return that;
 	}
 }
+
+var $ = new modulo;
