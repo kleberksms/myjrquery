@@ -11,6 +11,8 @@
 
 	<p>Segundo parágrafo, com <a href="http://www.apple.com">links</a> e outras  <strong>informações</strong>.</p>
 
+	<div id="console"></div>
+
 	<script type="text/javascript" src="myjrquery.js"></script>
 	<script type="text/javascript">
 		//using the module above created
@@ -18,12 +20,14 @@
 
 		$("a, .paragrafo").addClass("destaque");
 
-		$("a, p").on("click", function(event){
+		$("a").on("click", function(event){
 			event.preventDefault();
 			event.stopPropagation();
 			alert("teste");
 			return false;
 		}, "body");
+
+		$("#console").text("teste")
 	</script>
 </body>
 </html>

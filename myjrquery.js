@@ -82,6 +82,34 @@ var modulo = function(){
 				}
 
 			}
+
+			return that;
+		}
+
+		that.html = function(content){
+			i = 0;
+			if(el.length == 1){
+				el[0].innerHTML = content;
+			}else{
+				for(; i < len; i++){
+					el[i].innerHTML = content;
+				}
+			}
+			
+			return that;
+		}
+
+		that.text = function(text){
+			i = 0;
+			if(el.length == 1){
+				el[0].innerText = text;
+			}else{
+				for(; i < len; i++){
+					el[i].innerText = text;
+				}
+			}
+			
+			return that;
 		}
 
 		// over here we select anything on the DOM
@@ -91,6 +119,7 @@ var modulo = function(){
 				el = that.toArray(sels);
 				len = el.length;
 				that.toTagNames();
+
 			}else{
 				//fallback
 			}
